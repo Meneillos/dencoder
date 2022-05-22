@@ -16,7 +16,7 @@ func decode(str string) string {
 	originalStr, err := base64.StdEncoding.DecodeString(str)
 	if err != nil {
 		fmt.Println("ERROR: ", err.Error())
-		os.Exit(-1)
+		os.Exit(1)
 	}
 	return string(originalStr)
 }
@@ -25,7 +25,7 @@ func decode(str string) string {
 func usage() {
 	fmt.Println("USAGE:")
 	fmt.Println("dencoder [-encode / -decode] string")
-	os.Exit(-1)
+	os.Exit(1)
 }
 
 // Main function.
