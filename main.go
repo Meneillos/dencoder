@@ -35,9 +35,9 @@ func main() {
 	}
 
 	switch os.Args[1] {
-	case "-encode":
+	case "-encode", "-e":
 		fmt.Println(encode(os.Args[2]))
-	case "-decode":
+	case "-decode", "-d":
 		fmt.Println(decode(os.Args[2]))
 	default:
 		usage()
