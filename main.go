@@ -11,7 +11,7 @@ func encode(str string) string {
 	return base64.StdEncoding.EncodeToString([]byte(str))
 }
 
-// Encode an already encoded string.
+// Decode an already encoded string.
 func decode(str string) string {
 	originalStr, err := base64.StdEncoding.DecodeString(str)
 	if err != nil {
